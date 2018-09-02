@@ -1,0 +1,18 @@
+
+//Encuentra palabras adyacentes repetidas
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+ string previous = " ";
+ string current;
+ while (cin >> current) {
+   if (previous == current)
+     cout << "Palabra repetida: "<<current<< '\n';
+   previous = current;
+   }
+return 0;
+
+}
