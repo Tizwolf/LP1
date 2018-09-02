@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+using namespace std;
+ 
+int main()
+{
+	cout<<"Ingrese su nombre y el de su persona especial presione enter, got it?"<<endl;
+	string nombre1;
+	string nombre2;
+	cin>>nombre1>>nombre2;
+	if (nombre1 == nombre2)
+		
+		cout<<"Ambos son iguales"<<endl;
+		
+	else if (nombre1 < nombre2)
+		
+		cout<<nombre1<<" Está lexicograficamente antes"<<endl;
+		
+		
+	else // (nombre1 > nombre2);
+		
+		cout<<nombre1<<" Está lexicograficamente después"<<endl;
+			
+	cout<<nombre1+nombre2<<endl;
+}
