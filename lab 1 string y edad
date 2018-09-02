@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+ 
+int main()
+{
+	cout<<"Ingrese su nombre y presione enter, got it?"<<endl;
+	string nombre;
+	int edad;
+	cin>>nombre;
+	cin>>edad;
+	cout<<"Hola "<<nombre<<"("<<edad<<")"<<endl;
+	return 0;
+
+}
+
+
+//Al entrar el número y nombre en vez de nombre y edad...Compila el nombre como
+la edad ( es decir: Hola 18) y la edad como basura ( en este caso 0)
