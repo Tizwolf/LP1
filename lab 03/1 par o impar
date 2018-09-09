@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main()
+{	
+cout<<"Ingrese un numero entero"<<endl;
+int numero;
+cin>>numero;
+if (numero % 2 == 0)
+	cout<<"El valor de "<<numero<< " es un numero par"<<endl;
+else
+	cout<<"El valor de "<<numero<< " es un numero impar"<<endl;
+
+}
+
