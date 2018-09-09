@@ -1,1 +1,19 @@
-
+Definir ingredientes necesarios para el plato (arroz, ajo, lomo, tomate, cebolla, cucharada, papas, sal, agua, aceite)
+Definir utensilios (cuchillo, sartén, cuchara, taza, tabla para picar, pelador de papas, cocina, tenedor, olla)
+Picar en gajos grandes si es tomate o cebolla o papas= …. picados
+Picar en cuadrados lomo y ajo = ajo picado, lomo picado
+Función: encender hornilla, apagar hornilla, echar aceite, mezclar
+Mientras:
+Para n persona medir una ½ taza de arroz*n
+		Echar aceite a la olla y colocar ajo picado, juntar y colocar media cucharada de sal, 
+			Si el ajo está dorado: echar arroz y colocar 1 taza de agua*n
+				Si el arroz está seco: echar ¼ de agua a la olla, bajar el fuego y apagar hornilla 
+Echar aceite al sartén y colocar ajo picado 
+	Si el ajo está dorado: echar lomo
+		Si el lomo está cocido: echar cebolla y tomate… picados. Y mezclar
+			Si la cebolla y tomate están cocidos: apagar hornilla.
+Echar aceite….. (papas)
+Juntar ingredientes cocinados en plato
+Comer
+Lavar
+Ir al baño
