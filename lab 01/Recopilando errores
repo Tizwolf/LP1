@@ -1,0 +1,23 @@
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	int kk = 2;
+	cout<<"Hola vatos "<<kk<<endl;
+	return 0;
+}
+
+// 1.-Sin punto y coma luego de endl...cout<<"Hola vatos"<<endl----->: [Error] expected ';' before 'return'
+// 2.-letras luego de "hola vatos"....cout<<"Hola vatos"kk<<endl;------>[Error] expected ';' before numeric constant
+// 3.-Incluyendo el ; (para resolver el problema)  en el anterior error...	cout<<"Hola vatos";kk<<endl;------>	[Error] 'kk' was not declared in this scope       
+// 4.-Declarando a kk como string....string kk= 1;    cout<<"Hola vatos";kk<<endl;----->[Error] invalid conversion from 'int' to 'const char*' [-fpermissive]                                          
+// 5.-Declarando a kk como int.... int kk= 1;      cout<<"Hola vatos";kk<<endl;------>	[Error] invalid operands of types 'int' and '<unresolved overloaded function type>' to binary 'operator<<'                                                                                      
+// 6.-En vez de int ...double main()------>[Error] '::main' must return 'int'   
+// 7.-int main (aha)----->[Error] 'aha' was not declared in this scope                                                              
+// 8.-Poniendo fuera de las llaves cualquier cosa....564;------>[Error] expected unqualified-id before numeric constant
+// 9.-Colocando cin, en vez de cout, más el cambio de operadores >>....cin>>"Hola vatos ">>kk>>endl;------>[Error] no match for 'operator>>' (operand types are 'std::istream {aka std::basic_istream<char>}' and 'const char [12]')
+// and	[Note] candidates are:
+// 10.-Cambiando el 0 por void, en la penultima linea....return void;----->[Error] expected primary-expression before 'void'
+//and  [Error] expected ';' before 'void'
+//finally	[Error] declaration does not declare anything [-fpermissive]
