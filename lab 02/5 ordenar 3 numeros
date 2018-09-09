@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main()
+{	
+cout<<"Ingrese tres numeros enteros"<<endl;
+int x, y, z;
+int menor, mayor, medio ;
+cin>>x>>y>>z;
+	
+	if (y>x){
+		
+			mayor = y;
+			menor = x;
+		}
+	else 
+		mayor=x;
+		menor=y;
+		
+	if (z>mayor){
+		
+			medio = mayor;
+			mayor = z;
+		}
+	if (z<menor)
+		{
+			medio=menor;
+			menor=z;
+		}
+	else 
+		medio = z;
+
+cout<<"El numero mayor es: "<<mayor<<endl;
+cout<<"El numero medio es: "<<medio<<endl;
+cout<<"El numero menor es: "<<menor<<endl;
+	
+}
