@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int main()
+{	
+cout<<"Ingrese el nombre de un numero de 0 a 4: "<<endl;
+
+string numero_nombre;
+//int cero= 0,uno=1 ,dos=2,tres=3,cuatro=4 ;
+
+cin>>numero_nombre;
+
+if(numero_nombre == "cero")
+	cout<<"--->   0 "<<endl;
+		
+	else
+		
+if(numero_nombre == "uno")
+	cout<<"--->   1 "<<endl;
+		
+	else
+			
+if(numero_nombre == "dos")
+	cout<<"--->   2 "<<endl;
+		
+	else
+		
+if(numero_nombre == "tres")
+	cout<<"--->   3 "<<endl;
+		
+	else
+		
+if(numero_nombre == "cuatro")
+	cout<<"--->   4 "<<endl;
+	
+	else
+		cout<<"No conosco ese numero ;p"<<endl;	
+
+
+}
