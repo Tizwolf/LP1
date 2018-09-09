@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{	
+//int double =20 5	[Error] expected unqualified-id before '=' token 
+
+int a;
+
+int n;
+  a -= n;
+int n2;
+  a += n2;
+int n3;
+  a *= n;
+int n4;
+  a /= n4;
+  
+
+cout<<"Ingrese un numero: "<<endl;
+cin>>a;
+
+cout<<n<<"----->a-=1"<<endl;
+cout<<n2<<"----->a+=1"<<endl;
+cout<<n3<<"----->a*=1"<<endl;
+cout<<n4<<"----->a/=1"<<endl;
+cout<<++a<<"----->++a"<<endl;
+cout<<a++<<"----->a++1"<<endl;
+
+	
+}
