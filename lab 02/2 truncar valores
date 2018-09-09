@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main()
+{	
+ double d = 2400.3267;//8bytes
+ int a = d; //truncar valores de 8 guardar a 4 bytes
+ 
+ cout<<d<<endl;
+ cout<<a<<endl;
+
+	
+}
