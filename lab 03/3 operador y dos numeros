@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{	
+cout<<"Ingrese un operador (+ , - , * , / )y los dos numeros que utilizara"<<endl;
+double firstnumber;
+double secondnumber;
+char operador;
+
+cin>>operador>>firstnumber>>secondnumber;
+
+if (operador == '+')
+	cout<<firstnumber+secondnumber<<endl;
+if (operador == '-')
+	cout<<firstnumber-secondnumber<<endl;
+if (operador == '*')
+	cout<<firstnumber*secondnumber<<endl;
+if (operador == '/')
+	cout<<firstnumber/secondnumber<<endl;
+	
+return 0;
+}
+
