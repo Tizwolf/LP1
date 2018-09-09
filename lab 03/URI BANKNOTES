@@ -1,0 +1,22 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() 
+{
+ 
+    int numero;
+	int billetes [7] = {100, 50, 20, 10, 5, 2, 1};
+	int veces [7] = {0, 0, 0, 0, 0, 0, 0};
+	cin >>numero;
+	for( int i=0; i<7; i++)
+	{
+		veces[i]=numero/billetes[i]; 
+		numero= numero% billetes[i];
+	}
+	for( int i=0; i<7; i++)
+	{
+       cout <<veces[i]<<"nota(s) de R$ " <<billetes[i] <<endl ;
+	}
+	return 0;
+}
