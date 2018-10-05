@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+char letras(char n)
+{
+  return n;
+}
+
+int main()
+{
+    int i=97;///CODIGO ASCI ALT + 97 = a
+
+    while (i<123){///CODIGO ASCI ALT + 123 = z
+        cout<<letras(i)<<'\t'<<i<<'\n';++i;
+    }
+    return 0;
+}
+
+    
