@@ -1,0 +1,23 @@
+
+//Programa de caracateres de "a" a "z" (for statement) A mayus y 0 a 9 
+
+#include <iostream>
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	for(int i=97 ;i<123;i++)
+	{
+		cout<<char(i)<<'\t'<<i<<'\n';
+	}
+    for(int i=65;i<91;i++) //CODIGO ASCI MAYUSCULAS
+    {
+	    cout<<char(i)<<'\t'<<i<<'\n';
+	}
+	for(int i=48;i<58;i++) // CODIGO ASCI 0 A 9  
+	{
+		cout<<char(i)<<'\t'<<i<<'\n';
+	}
+	return 0;
+}
