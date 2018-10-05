@@ -1,0 +1,30 @@
+//Convertir yenes, euros, y libras en dólares 
+//sufijos 'y' o 'e' o 'l'  indican la unidad
+//cualquier otro es error
+//1 yen es igual a 0.0088 dólar estadounidense
+//1 euro Es igual a 1.15 dólar estadounidense
+//1 libra esterlina Es igual a 1.30 dólar estadounidense
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	const double yenes  = 0.0088;//numero de dolares en un yen
+	const double euros  = 1.15; //numero de dolares en un euro
+ 	const double libras = 1.30; //numero de dolares en una libra
+	int length = 1; //longitud
+	char unit = ' '; // espacio (no es unidad)
+	cout<<"Por favor ingrese una longitud seguida de su unidad (y / e / l) para convertirla en dolares: \n";
+	cin>>length>>unit;
+	
+	if (unit == 'y')
+		cout<<length<< "yenes == "<<yenes*length<<"d\n";
+	if (unit == 'e')
+		cout<<length<< "euros == "<<euros*length<<"d\n";		
+	else if(unit == 'l')
+		cout<<length<<"libras == "<<libras*length<<"d\n";
+	else 
+		cout<<"Lo siento, no conosco una unidad llamada '"<<unit<<"'\n";
+	
+}
