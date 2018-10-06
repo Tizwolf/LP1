@@ -1,0 +1,47 @@
+
+/////QUEST 1
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double a;
+    double b;
+    double mayor;
+    double menor;
+    while(cin>>a>>b){
+           
+            if(a!='#'||b!='#'){
+                cout<<a<<'\t'<<b<<endl;
+				    		
+	    		if (a>b){
+				
+	    			mayor = a;
+	    			menor = b;
+	    		
+	    		cout<<menor<<" es el minimo"<<endl;
+	            cout<<mayor<<" es el maximo"<<endl;
+	    		
+	    		}
+	    		if (b>a){
+				
+	    			menor= a;
+	    			mayor= b;
+	    			
+	    		cout<<menor<<" es el minimo"<<endl;
+	            cout<<mayor<<" es el maximo"<<endl;
+	    		}
+	    		else if (a == b){
+	                    cout<<"son iguales"<<endl;
+	                }
+	    		
+				else if(mayor-menor<=1.0/100){
+                    cout<<"los numeros son casi iguales"<<endl;
+                }
+               
+            	}
+            
+		}
+		return 0;
+    }
