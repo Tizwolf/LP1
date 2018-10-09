@@ -8,68 +8,107 @@
 #include <algorithm>
 using namespace std;
 
-
-
 int main()
 {
 	
 	vector<double> medidas; 
 	vector<string> units;
 	vector<double> conversiones;
+	vector<double> aux;
 			
 	const double cm = 0.01;//numero de cm en un metro
 	const double in = 0.0254;//numero de in en un metro
 	const double ft = 0.3048; // numero de ft en un metro
 	
 	
+	
 	string unit = " ";
 	
+	
+	double promedio;	
 	double medi ;
 	double conversion ;
-	medidas.push_back(medi);
-	units.push_back(unit);
+	
 
 	
-	cout<<"Ingrese una longitud seguida de su unidad (in o ft o cm) para convertirlos en metros: \n";
+	cout<<"Ingrese una longitud seguida de su unidad (in o ft o cm o m) para convertirlos en metros: \n";
 	
-		while (cin>>medi>>unit ) {			//lee
+		while (cin>>medi>>unit) {			//lee
+			//conversiones.push_back(conversion); // LOS PUSH BACK DENTRO PARA NO JUNTAR BASURA --?
+			medidas.push_back(medi);
+			units.push_back(unit);
 			
 			if (unit == "cm"){
 						
 				cout<<medi<< "cm == "<<cm*medi<<"m\n";
 				conversion = (cm*medi);
+				
 			}
 			else if(unit == "in"){
 			
 					cout<<medi<<"in == "<<in*medi<<"m\n";
 					conversion = (in*medi);
+					
 				}
 			else if(unit == "ft"){
 			
 					cout<<medi<<"ft == "<<ft*medi<<"m\n";
 					conversion = (ft*medi);
+					
+				}
+			else if(unit == "m"){
+					cout<<medi<<"m == "<<medi<<"m\n";
+					conversion = medi;
+					
 				}
 			else {
 					cout<<"Lo siento, no conosco una unidad llamada '"<<unit<<"'\n";
+					//sort(medidas.begin(),medidas.end());
+					conversion= 0;
+					//conversiones.pop_back();
+					medidas.pop_back();
+					units.pop_back();
+					
+					
 				}
-			
-			
 		
-			conversiones.push_back(conversion);
-			cout<<"El menor hasta ahora es: "<<conversiones[0]<<endl;
-			cout<<"El mayor hasta ahora es: "<<conversiones[conversiones.size()-1]<<endl;
+			conversiones.push_back(conversion); // LOS PUSH BACK DENTRO PARA NO JUNTAR BASURA --?
+			if(conversion == 0)
+			{
+				conversiones.pop_back();//ELIMINA EL ULTIMO ELEMENTO DEL VECTOR
+			}
+			
 						
-				
+			sort(conversiones.begin(),conversiones.end()); 
+			
+			//INTENTO MAS CERCANO...
+			//for(int k=0; k<conversiones.size(); k++){
+			//		sort(conversiones.begin(),conversiones.end()); 
+              //   if(conversiones[0]== conversiones[k]){
+			//	 	cout<<k+1;	
+                	///nada = k+1;
+               	//	cout<<"El menor hasta ahora es: "<<conversiones[0]<<"m"<<" ==> "<<medidas[1]<<units[1]<<endl;
+				//	cout<<"El mayor hasta ahora es: "<<conversiones[conversiones.size()-1]<<"m"<<" ==> "<<medidas[1]<<units[1]<<endl;
+               //                   }
+               ///    }
+					
+					
+			
+			cout<<"El menor hasta ahora es: "<<conversiones[0]<<"m"<<endl;//<<" ==> "<<medidas<<units<<endl;
+			cout<<"El mayor hasta ahora es: "<<conversiones[conversiones.size()-1]<<"m"<<endl;//" ==> "<<medi<<unit<<endl;
+						
+			//int promedio;	
 			double sum  = 0;
 			for (int i=0; i<conversiones.size();i++){
 					sum += conversiones[i];
 				
 				}
+			//conversiones.size();
+			promedio = sum/conversiones.size();
 			cout<<"La suma de las medidas convertidas hasta ahora es:  "<<sum<<endl;
-				
+		
 		
 		}
-	sort(conversiones.begin(),conversiones.end()); 
 							
 	cout<<"Las conversiones hasta ahora en orden son: ";
 	for(int i=0;i<conversiones.size();i++){
@@ -78,6 +117,7 @@ int main()
 		cout<<"("<<conversiones[i]<<")";
 					
 		}
-
+	
 
 }
+	
