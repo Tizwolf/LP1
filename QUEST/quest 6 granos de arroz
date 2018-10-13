@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+//#include  
+using namespace std;
+
+
+int main(){
+
+unsigned long long granis_arroz;
+//vector<int> cuadrados;
+
+
+			
+	for(int i = 1; i<=64 ; i++ ){
+		
+		granis_arroz = pow(2, i -1);
+		
+		cout<<"En "<<i<<" cuadrado hay: "<<	granis_arroz<<endl;
+		//if (granis_arroz <= 1000)
+		//	{	cout<<i<<endl;
+		//	}
+		//if (granis_arroz <= pow(10, 6))
+		//	{	cout<<i<<endl;
+		//	}	
+		//if (granis_arroz <= pow(10,9))
+		//	{	cout<<i<<endl;
+		//	}	
+		
+	}
+
+
+
+}
