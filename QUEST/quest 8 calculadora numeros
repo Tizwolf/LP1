@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+int main()
+{	
+cout<<"Ingrese un operador (+ , - , * , / )y los dos numeros que utilizara"<<endl;
+double firstnumber;
+double secondnumber;
+char operador;
+
+cin>>operador>>firstnumber>>secondnumber;
+
+switch (operador){
+
+	case '+':
+		cout<<firstnumber+secondnumber<<endl;
+		break;
+	case'-':
+		cout<<firstnumber-secondnumber<<endl;
+		break;
+	case '*':
+		cout<<firstnumber*secondnumber<<endl;
+		break;
+	case '/':
+		cout<<firstnumber/secondnumber<<endl;
+		break;
+	default:
+		cout<<"No conosco ese operador"<<operador<<endl;
+		break;	
+}
+return 0;
+}
