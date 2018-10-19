@@ -1,0 +1,93 @@
+#include <iostream>
+#include<string>
+#include<vector>
+using namespace std;
+
+void num(string  a,string c, double &val, double &val1){
+	
+	vector <string>numeros; 
+	
+	numeros.push_back("0");
+	numeros.push_back("1");
+	numeros.push_back("2");
+	numeros.push_back("3");
+	numeros.push_back("4");
+	numeros.push_back("5");
+	numeros.push_back("6");
+	numeros.push_back("7");
+	numeros.push_back("8");
+	numeros.push_back("9");
+	
+	
+	vector <string>letras; 
+	
+	letras.push_back("cero");
+	letras.push_back("uno");
+	letras.push_back("dos");
+	letras.push_back("tres");
+	letras.push_back("cuatro");
+	letras.push_back("cinco");
+	letras.push_back("seis");
+	letras.push_back("siete");
+	letras.push_back("ocho");
+	letras.push_back("nueve");
+	
+	for(int i=0;i<10;i++){
+		if((num[i]==a)||(let[i]==a))
+			val=i;
+
+		if((num[i]==c)||(let[i]==c))
+				val1=i;
+}}
+int main() {
+string a;
+	char b;
+	string c;
+	double val;
+	double val1;
+	vector <string>numeros; 
+	
+	numeros.push_back("0");
+	numeros.push_back("1");
+	numeros.push_back("2");
+	numeros.push_back("3");
+	numeros.push_back("4");
+	numeros.push_back("5");
+	numeros.push_back("6");
+	numeros.push_back("7");
+	numeros.push_back("8");
+	numeros.push_back("9");
+	
+	vector <string>let; 
+	let.push_back("cero");
+	let.push_back("uno");
+	let.push_back("dos");
+	let.push_back("tres");
+	let.push_back("cuatro");
+	let.push_back("cinco");
+	let.push_back("seis");
+	let.push_back("siete");
+	let.push_back("ocho");
+	let.push_back("nueve");
+	
+		while(true){
+			cin>>a;cin>>b;cin>>c;
+			number(a,c,val,val1);
+		
+				cout<<val<<" ";
+				
+				cout<<val1<<" ";
+			switch(b){
+			
+		
+				case '+':
+						cout<<val+val1<<endl;break;
+				case '-':
+						cout<<val-val1<<endl;break;
+				case '*':
+						cout<<val*val1<<endl;break;
+				default:
+						cout<<val/val1<<endl;break;
+}
+			}
+}
