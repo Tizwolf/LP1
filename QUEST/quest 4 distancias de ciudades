@@ -1,0 +1,74 @@
+//2) Lee una secuencia de valores dobles en un vector. Piensa que cada valor es la
+//distancia entre dos ciudades a lo largo de una ruta dada. Calcular e imprimir La
+//distancia total (la suma de todas las distancias). Encuentra e imprime la menor
+//y la mayor distancia entre dos ciudades vecinas. Encuentra e imprime la distancia
+//media entre dos ciudades vecinas.
+
+
+#include <iostream>
+#include <vector>
+
+using namespace std; 
+int main (){
+
+vector <double> distancias;
+ double distancia;
+ double suma = 0;
+ 	int mayor, menor;
+
+cout<<"Ingrese distancias de  ciudades: "<<endl;
+	while(cin>>distancia){
+	
+		distancias.push_back(distancia);
+	
+		mayor = distancias[0]; //Le asignamos el primer elemento del array
+		menor = distancias[0]; //Así empezamos a comparar
+		 
+		for (int i=0; i<distancias.size(); i++){
+		    if (distancias[i]> mayor){
+		    mayor=distancias[i];
+		    }
+		    if (distancias[i]< menor){
+		    menor=distancias[i];
+		    	}
+		
+		}
+			
+			
+	}
+		cout<<"La mayor distancia es: "<<mayor<<endl;
+		cout<<"La menor distancia es: "<<menor<<endl;
+		
+			for (int i=0; i<distancias.size();i++){
+					suma += distancias[i];
+				
+				}
+		cout<<"La distancia total o suma total es: "<<suma<<endl;	
+	
+	vector <double> media;
+	double medi;
+	cout<<"Distancia  media entre  dos ciudades:  "<<endl;
+	
+	for(int i=0; i<distancias.size(); i++){
+		
+		medi = (distancias[i]+distancias[i+1])/2;
+		media.push_back(medi);
+		
+			//if(medi == media.end()){
+			//	cout<<"";
+			//}
+			//if (distancias[i+1] != distancias.end()){
+			//	cout<<"";
+			//}
+		cout<<"Distancia A: "<<distancias[i]<<"   Distancia B: "<<distancias[i+1]<<"   Distancia media: "<<media[i]<<endl;
+		
+		
+		
+	}
+		
+
+			
+			
+}
+
+
