@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+int n, years, meses, dias;
+cin>>n;
+years = n/365;
+//n = n-(n*365);
+meses = (n%365)/30;
+//n = n-(n*30);
+dias =(n%365)%30;
+
+cout<<years<<" ano(s)"<<endl;
+cout<<meses<<" mes(es)"<<endl;
+cout<<dias<<" dia(s)"<<endl;
+return 0;
+
+}
