@@ -1,0 +1,74 @@
+#include <iostream>
+#include <vector>
+#include <stdexcept>
+
+using namespace std;
+int main()
+
+	try
+{
+    int rest;
+    vector <int> armas;
+    armas.push_back(2);
+    armas.push_back(1);
+    armas.push_back(3);
+    armas.push_back(2);
+    armas.push_back(3);
+    for(int i=0; i<armas.size();i++){
+        cout<<"Escoja el numero de los siguientes: "<<endl;
+        cout<<"1.Piedra"<<endl;
+        cout<<"2.Papel"<<endl;
+        cout<<"3.Tijeras"<<endl;
+        cin>>rest;
+            switch(rest){
+                case 1:
+                    switch(armas[i]){
+                        case 1:
+                            cout<<"Empate"<< "  Escogiste piedra, y la ia escogio piedra"<<endl;
+                            break;
+                        case 2:
+                            cout<<"Perdiste!"<< "  Escogiste piedra, y la ia escogio papel"<<endl;
+                            break;
+                        default:
+                            cout<<"Ganaste "<< "  Escogiste piedra y la ia escogio tijeras"<<endl;
+                            break;
+                    }
+                    break;
+                case 2:
+                    switch(armas[i]){
+                    case 1:
+                        cout<<"Ganaste"<< "  Escogiste papel, y la ia escogio piedra"<<endl;
+                        break;
+                    case 2:
+                        cout<<"Empate"<< "  Escogiste papel , y la ia escogio papel"<<endl;
+                        break;
+                    default:
+                        cout<<"Perdiste!"<< "  Escogiste papel, y la ia escogio tijeras"<<endl;
+                        break;
+                    }
+                    break;
+                case 3:
+                    switch(armas[i]){
+                    case 1:
+                        cout<<"Perdiste!"<< "  Escogiste tijeras, y la ia escogio piedra"<<endl;
+                        break;
+                    case 2:
+                        cout<<"Ganaste"<< "  Escogiste tijeras, y la ia escogio papel"<<endl;
+                        break;
+                    default:
+                        cout<<"Empate"<< "  Escogiste tijeras , y la ia escogio tijeras 7u7"<<endl;
+                        break;
+                    }
+                    break;
+                default:
+                    throw runtime_error("opcion no valida");
+                    break;
+            }
+            }
+    return 0;
+    }
+    catch(exception & e){
+        cerr<<"Error: "<<e.what()<<endl;
+        return 1;
+}	
+
