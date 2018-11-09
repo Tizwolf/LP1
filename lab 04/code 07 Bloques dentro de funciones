@@ -1,0 +1,22 @@
+//Bloques dentro de funciones
+//code 07
+#include <iostream>
+
+using namespace std;
+
+//Bloques dentro de funciones son inevitables
+//Pero mantiene la identación para evitar errores
+
+void f1(int x, int y)
+{
+	if (x>y){
+		//......
+	}
+	else {
+		//...
+		{
+			//...			
+		}
+		//...
+	}
+}
