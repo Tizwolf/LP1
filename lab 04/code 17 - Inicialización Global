@@ -1,0 +1,40 @@
+//INICIALIZACIÓN GLOBAL
+//code 17
+#include <iostream>
+
+using namespace std;
+
+struct Date
+{
+	Date (int y , int m, int d ) { /* . . . */ }
+} ;
+
+namespace good
+{
+	const Date default_date (1970 ,1 ,1) ;
+	// La fecha por defecto es el 1 de Enero de 1970
+}
+
+namespace better
+{
+	const Date default_date( ) 		//retorna la fecha por default
+	{
+		return Date (1970 ,1 , 1) ;
+	}
+}
+
+namespace best
+{
+	const Date& default_date ( )
+	{
+		static const Date dd (1970 ,1 , 1) ;
+		// inicializa dd la primera vez que entra aqui
+		return dd ;
+	}
+}
+int main ( )
+{
+	Date d1 = good :: default_date ;
+	Date d2 = better :: default_date ( ) ;
+	Date d3 = best :: default_date( ) ;
+}
