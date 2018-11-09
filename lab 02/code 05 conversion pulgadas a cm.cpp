@@ -13,6 +13,12 @@ int main()
 	char unit = " "; // espacio (no es unidad)
 	cout<<"Por favor ingrese una longitud seguida de su unidad (c o i): \n";
 	cin <<length >unit;
-	//Continuara....(*)
+	//(*)
+	if (unit == 'i')
+		cout<<length<< "in == "<<cm_per_inch*length<<"cm\";
+	else if(unit == 'c')
+		cout<<length<<"cm == "<<length/cm_per_inch<<"in\n";
+	else 
+		cout<<"Lo siento, no conosco una unidad llamada '"<<unit<<"'\n";
 	
 }
