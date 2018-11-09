@@ -1,0 +1,44 @@
+//EXAMEN PARCIAL
+//PREGUNTA 6
+//Hacer un programa que recibe nombres seguidos de puntajes.
+//Ana 20
+//Alan 30
+//La entrada termina con SinNombre 0
+//Revisar que no haya dos nombres repetidos, si es el caso  lanzar un error
+
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+int main (){
+	
+	cout<<"Ingrese nombres seguidos de sus puntajes"<<endl;
+	
+	vector <string> nombres;
+	vector <double> puntajes;
+	string nombre;
+	double punt;
+	
+	while(cin>>nombre>>punt){
+		
+		
+		puntajes.push_back(punt);
+		
+		for (int i=0; i<nombres.size();i++){
+			
+			if (nombre == nombres[i]){
+			
+				nombres.pop_back();
+				cout<<"Ya existe ese nombre "<<endl;
+				cout<<"SinNombre 0 "<<endl;
+				return 0;
+			}
+		}
+		nombres.push_back(nombre);
+		
+	}
+
+	
+}
