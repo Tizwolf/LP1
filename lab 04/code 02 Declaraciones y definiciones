@@ -1,0 +1,56 @@
+//DECLARACIONES Y DEFINICIONES
+//code 02
+#include <iostream>
+#
+
+using namespace std;
+
+int f(int);					//declaración de f
+
+int main()
+{
+	int i= 7; 				//declaración de i
+	cout<<f(i)<<'\n';
+}
+
+double my_sqrt(double);		//sin cuerpo de función
+extern int a; 				//extern sin inicialización no es una definición
+
+int a; 						//definición
+//int a; 					//error: definición doble
+
+int x= 7; 					//definición
+extern int x; 				//declaración
+extern int x; 				// otra declaración
+
+double my_sqrt(double);		//declaración
+double my_sqrt(double d) {
+	return 0.0;				//definición
+}
+
+//double my_sqrt(double d) {
+//    return 1.0
+// } error:   double definición 
+
+double my_sqrt(double);    	//otra declaración de my_sqrt
+double my_sqrt(double);		//otra declaración de my_sqrt
+
+//int my_sqrt(double); 		//  error: declaraciones
+//inconsistentes de my_sqrt
+
+double expression(); 		//solo declaración; no definición
+double primary(){
+	return expression();
+}
+
+double term(){
+	return primary();
+}
+
+double expression(){
+	return term();
+}
+
+int f(int n){
+	return n;
+}
