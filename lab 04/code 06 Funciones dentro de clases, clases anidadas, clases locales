@@ -1,0 +1,28 @@
+//Funciones dentro de clases, clases anidadas, clases locales
+//code 06
+#include <iostream>
+
+using namespace std;
+
+
+class C {
+	public: 
+		void f();
+		void g() {}   				//Función miembro de la clase
+};
+
+//Clases anidadas: Util solo para clases complicadas
+
+class C{ 
+	public:
+		struct M{
+		};
+};
+
+//Clases dentro de funciones: clases locales (EVITALAS)
+//Función muy larga
+
+void f()
+{
+	class L {	};
+}
