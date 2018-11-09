@@ -1,0 +1,42 @@
+//EXAMEN PARCIAL
+//PREGUNTA 5 
+//Hacer un programa que resuelve una ecuacion cuadratica de la forma ax^2+bx+c= 0.
+
+#include <iostream>
+#include <cmath>
+#include <stdexcept>
+
+using namespace std;
+int main ()
+try
+{
+	
+	cout<<"De acuerdo a ax^2+bx+c, ingrese su a, b y c: "<<endl;
+	
+	double (a);
+	double (b);
+	double (c);
+	
+	
+	double x1 ;
+	double x2 ;
+	
+	cin>>a>>b>>c;
+	
+	double aux = (b*b-4*a*c);
+	
+	if (aux>=0){
+		 x1 = (-b+sqrt(aux))/(2*a);
+	 	 x2 = (-b-sqrt(aux))/(2*a);
+		cout<<"x1 : "<<x1<<"  x2: "<<x2<<endl;
+	}
+	if (aux<0){
+		throw runtime_error("Es numero imaginario");
+		
+		}	
+
+}
+   catch(exception & e){
+        cerr<<"Error: "<<e.what()<<endl;
+        return 1;
+    }
