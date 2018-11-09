@@ -1,0 +1,19 @@
+//Paso de parametros por referencia (4)
+//code 15
+#include <iostream>
+
+
+using namespace std;
+int incr1 ( int a ) { return a+1; }
+//retorna el nuevo valor
+
+void incr2 (int& a ) { ++a ; }
+// modifica el objeto que le pasa por referencia
+
+int main ( )
+{
+	int x = 7 ;
+	x = incr1 ( x ) ; 			// muy obvio
+	incr2 ( x ) ; 				// muy oscuro
+	return 0 ;
+}
