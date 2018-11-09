@@ -1,0 +1,28 @@
+//SCOPE
+//code 04
+#include <iostream>
+
+using namespace std;
+
+void f()
+{
+	//g();      //error: g() no está en el scope
+}
+
+void g()
+{
+	f();		// ok : f() está en el scope
+}
+
+void h()
+{
+	//int x= y; //error : y aún no está en el scope
+	int x = 0; 
+	int y = x;		// ok: x está en el scope
+	g();			// ok: g() está en el scope
+}
+
+int main()
+{	
+	h();
+}
