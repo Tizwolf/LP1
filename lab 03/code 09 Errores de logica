@@ -1,0 +1,35 @@
+//code 09 ERRORES DE LOGICA
+
+#include <iostream>
+#include <vector>
+#include <stdexcept> // for runtime_error 
+using namespace std;
+
+
+int main(){
+	
+	double temp = 0;
+	double sum = 0;
+	double high_temp = 0;   //inicializa
+	double low_temp = 0;    //inicializa
+	int no_of_temps = 0;
+	
+	
+	while (cin>>temp){      //lee temp
+		++no_of_temps;      //cuenta temp
+		sum += temp;        //calcula la suma
+		// Encuentra la mayor
+		if (temp>high_temp) high_temp = temp;
+		// Encuentra la menor
+		if (temp<low_temp)  low_temp = temp; 	
+		
+	}
+	
+	cout<<"Temperatura alta: "<<high_temp<<endl;
+	cout<<"Temperatura baja: "<<low_temp<<endl; 
+	cout<<"Temperatura promedio: "<<sum/no_of_temps<<endl;
+	
+	return 0; 
+	
+	
+}
