@@ -1,0 +1,33 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<string>musica;
+    conjunto.push_back("dnb");
+    conjunto.push_back("dubstep");
+    conjunto.push_back("vaporwave");
+    conjunto.push_back("dnb");
+    conjunto.push_back("dnb");
+    conjunto.push_back("hardstyle");
+    conjunto.push_back("dubstep");
+    conjunto.push_back("chill");
+    string moda;
+    int contador=0;
+    int mayor=0;
+    for(int i=0; i<musica.size();i++){
+        for(int j=i; j<musica.size(); j++){
+            if(musica[i]==musica[j]){
+                contador++;
+            }
+        }
+        if(contador>mayor){
+            moda=musica[i];
+            mayor=contador;
+        }
+        contador=0;
+    }
+    cout <<"La moda es: "<< moda << endl;
+    return 0;
+}
