@@ -1,0 +1,41 @@
+//DESTRUCTORES (1) Y (2) 
+//Code 09
+
+#include <iostream>
+#include <vector>
+
+class vector
+{
+	int sz; 				//el tamaño
+	double* elem;			//puntero a los elementos
+	
+	public:
+		vector(int s)		//constructor
+			:sz(s), elem(new double[s])	//asigna memoria
+		{
+			//inicializa los elemntos
+			for (int i= 0; i<s; ++i) elem[i]=0;
+		}
+		
+		~ vector()			//DESTRUCTOR
+		{
+			delete[] elem;			//libera memoria
+		}
+	
+	
+};
+
+void f3(int n)
+{
+	
+	int* p = new int[n]; 		//asigna n inst
+	vector v(n);				//define un vector
+							//(tambien asigna otros n ints)
+	delete[]p; 					//des-asigna los ints
+			//vector limpia su memoria al morir v
+}
+
+int main()
+{
+	f3(42);
+}
