@@ -1,0 +1,42 @@
+//INICIALIZACIÓN (1), (2) Y (3)
+//Code 06
+
+#include <iostream>
+using namespace std; 
+
+class X
+{
+	public: X()	{	}		//constructor por defecto
+};
+
+class Y
+{
+	public: 
+		Y(int)	{	}		//no hay constructor por defecto
+};
+
+int main()
+{
+	double* p0;					//sin inicializar (problemas)
+	double* p1 = new double; 	//obtiene un double no inicilizado
+	double* p2 = new double(5.5);  //obtiene un double inicilizado con
+	double* p3 = new double[5];		//obtiene 5 doubles inicializados
+	
+	//Obviamente si declaramos p0 sin inicializarlo estamos
+	//pidiendo problemas.
+		*p0 = 7.0;
+	//No sabemos a que parte de la memoria esta apuntando.
+	//Podría hacer crash	
+	
+	double* p4 = new double[5];
+			//double* p4 = new double[5](0,1,2,3,4)	;
+	for (int i= 0; i<5; ++i)
+		p4[i] = i; 
+		
+	X* px2 = new X[17];			//17 objs X inicializados por defecto
+	X* px1 = new X; 			//px1 apunta a un obj X inicializado por defecto
+	
+	//Y* py1 = new Y; 			//error: no hay constructor por defecto
+	//Y* py2 = new Y[17];
+	Y* py3 = new Y(13); 		//ok: inicializando a Y(13)
+}
