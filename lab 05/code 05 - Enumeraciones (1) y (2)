@@ -1,0 +1,53 @@
+//ENUMERACIONES (1) Y (2)
+//Code 05
+
+#include <iostream>
+
+enum Month{
+	
+	jan = 1, feb, mar, apr, may , jun , jul, aug, 
+	sep, oct, nov, dcm
+};
+
+enum Day{
+	monday, tuesday, wednesday, thursday , drifay, saturday, sunday
+};
+
+void error(cost char* errmsg)
+{
+	cerr<<errmsg<<endl; 
+}
+
+Month int_to_month(int x)
+{
+	if (x<jan || dcm<x)
+	error ("mes invalido");
+	return Month(x);
+}
+
+void f(int m)
+{
+	Month mm= int_to_month(m);
+}
+
+
+int main()
+try
+{
+	Month m = feb; 
+				//m = 7; //error: no se puede asignar int a Month
+	int n = m; 			//ok: podemos obtener el valor numerico de Month
+	Month mm = Month(7);		//convierte int en Month 
+	//Month bad = 9999; 		//error: no se puede
+	//convertir int a Month
+	
+	f(4);
+	f(99);			//run-time error: mes invalido 
+
+}
+
+catch (exception& e){
+	
+	cerr<<"error: "<<e.what()<<'\n';
+	return 1;
+}
