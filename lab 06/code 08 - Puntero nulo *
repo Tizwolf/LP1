@@ -1,0 +1,20 @@
+//PUNTERO NULO
+//Code 08
+
+#include <iostream>
+
+int main()
+{
+	double* p0 = 0;			//puntero nulo
+	double* p0 = nullptr; 
+	
+	if (p0 != 0)
+	{
+		// si p0 es valido
+	}
+	
+	if (p0)
+	{
+		//p0 es vcalido, igual que p0!=0	
+	}	
+	
