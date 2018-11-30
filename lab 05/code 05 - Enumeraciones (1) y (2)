@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+using namespace std;
+
 enum Month{
 	
 	jan = 1, feb, mar, apr, may , jun , jul, aug, 
@@ -13,7 +15,7 @@ enum Day{
 	monday, tuesday, wednesday, thursday , drifay, saturday, sunday
 };
 
-void error(cost char* errmsg)
+void error(const char* errmsg)
 {
 	cerr<<errmsg<<endl; 
 }
