@@ -1,0 +1,41 @@
+//COPIANDO (1) Y (2)
+//Code 08
+
+
+#include <iostream>
+
+using namespace std;
+
+class Date {
+	public:
+		enum Month{
+			jan =1, feb, mar, apr, may, jun, jul, 
+			aug, sep, oct, nov, dec
+		};
+		Date(int yy, Month mm, int dd): y(yy), m(mm), d(dd)
+		 
+		friend ostream& operator<<(ostream& os, const Date&)
+		{
+			return os<< '('<<d.y<<','<<d.m<<','<<dg
+		}
+	
+	private:
+		int y; 			//anho
+		Month m; 		
+		int d; 			//dia
+};
+
+int main()
+{
+	Date holiday (1978, Date::jul, 4); 		//inicializacion
+	Date d2 = holiday;
+	Date d3 = Date(1978, Date::jul, 4); 		
+	
+	holiday = Date(1978, Date::dec, 24);	//asignacion
+	d3 = holiday;
+	
+	cout<<Date(1978, Date::dec, 24);
+	return 0;
+
+}
+
