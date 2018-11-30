@@ -1,0 +1,22 @@
+//ACCESO A TRAVÉS DE PUNTEROS
+//Code 04
+
+#include <iostream>
+using namespace std; 
+
+int main()
+{
+	
+	double* p = new double[4];		//da memoria a 4 enteros 
+	double x = *p; 					//lee el primer obj apuntado por p
+	double y = p[2];				//lee el tercer obj apuntado por p
+	
+	*p = 7.7; 				//escribe en el primer obj apuntado por p
+	p[2]= 9.9; 				//escribe en el tercer obj apuntado por p
+	
+	{
+		double x = p[3];	//lee el 4to obj apuntado por p
+		p[3]= 4.4; 			//escrbe el 4to obj apuntado por p
+		double y = p[0]; 	//[0] es lo mismo que *p
+	}
+}
