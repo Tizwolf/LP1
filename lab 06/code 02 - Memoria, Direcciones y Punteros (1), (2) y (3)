@@ -1,0 +1,44 @@
+//MEMORIA, DIRECCIONES Y PUNTEROS (1) (2) y (3)
+//Code 02
+
+#include <iostream>
+using namespace std; 
+
+int main()
+{
+	int var = 17;
+	int* ptr = &var; 		//ptr guarda la direccion de var
+	
+	char ch = 'c';
+	char* pc = &ch;			//puntero a char
+	
+	int ii = 17;
+	int* pi = &ii;			//puntero a entero
+	
+	cout<< "pc== " <<pc<<"; contenido de pc== "<<*pc<<"\n";
+	cout<<"pi== "<<pi<<"; contenido de pi== "<<*pi<<"\n";
+	
+	*pc = 'x';				//ok: puedes asignar 'x'
+								//al char apuntado por pc
+	*pc= 27;				//ok: un int* apunta a un entero
+								//entonces *pi es un int
+	*pi = *pc; 				//ok: puedes asignar un char(pc)
+								//a un int(pi)
+	
+	// int i = pi;			//error: no puedes asignar un int* a un int
+	// pi = 7; 				//error: no puedes asignat un int a un int*
+	// pc = pi; 			//eror: no puedes asignar un int* a char*
+	// pi = pc; 			//error: no puedes asignar un char* a un int*
+	
+	{
+		char ch1 = 'a';
+		char ch2 = 'b';
+		char ch3 = 'c';
+		char ch4 = 'd';
+		
+		//int* pi = &ch3;	//apunta a ch3, un espacio de memoria        
+		       				//del tamaño de un char
+					//error: no podemos asignar un char* a un int*
+	}
+	
+}
