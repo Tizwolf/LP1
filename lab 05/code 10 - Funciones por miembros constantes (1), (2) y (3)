@@ -1,0 +1,59 @@
+//FUNCIONES POR MIEMBRO CONSTANTES  (1),(2) y (3)
+//Code 10
+
+#include <iostream>
+
+class Date {
+	
+	public:
+		enum Month {
+			jan = 1, feb, mar, apr, may, jun, jul, aug, 
+			sep, oct, nov, dec
+		};
+		Date(int yy, Month mm, int dd): y(yy), m(mm), d(dd){}
+		int day()	const; 		//miembro const: no se modifica
+		Month month() const; 	//miembro const: no se modifica
+		int year()  const; 		//miembro const: no se modifica
+		void add_day(int n); 	//se puede modificar
+		void add_month(int n); 	//se puede modificar
+		void add_year(int n);	//se puede modificar
+	private:
+		int y;					//anho
+		Month m; 	
+		int d; 					//dia del mes
+};
+
+int Date::day()	const
+{
+			//++d; 			//error: intenta cambiar
+			//el objeto de una funcion miembro constante
+			return d; 
+}
+
+void Date::add_day(int n){
+	
+}
+
+void some_function(Date&, const Date& start_of_term)
+{
+	int a = d.day();				//ok
+	int b = start_of_term.day();	//ok por que?
+	d.add_day (3);					//bien
+		//start_of_term.add_day(3); 	//error
+		
+}
+
+int main()
+{
+	
+	Date d(2000, Date::jan, 20);
+	const Date cd(2001, Date::feb, 21);
+	
+	cout<<d.day()<<" _ "<<cd.day()<<endl;	//ok
+	d.add_day(1);
+			//cd.add_day(1); 		//error: cd es una constante
+	some_function(d,cd);
+			//some_function(cd,d);	//error: cd es una constante
+	return 0;		
+	
+}
