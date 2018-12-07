@@ -1,0 +1,76 @@
+//LA CLASE LISTA (1) , (2) y (3)
+//Code 17
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Link 
+{
+	public: 
+		string value; 
+		Link(const string& v, Link* p = 0, Link*s = 0)
+			: value(v), prev(p), succ(s) 	{	}
+			
+		Link* insert(Link* n); 		//inserta n antes de este obj
+		
+		Link* erase(); 				//elimina este obj de la lista
+		
+		Link* find(const string& s); //encuentra s en la lista
+		
+		const Link* find(const string& s) const;	
+		
+		Link* next() const 
+		{
+			return succ; 
+		}
+		Link* previos() const 
+		{
+			return prev; 
+		}		
+		
+		void print()
+		{
+			Link* tmp = this;
+				while(tmp)
+				{
+					cout<<tmp->value<<"-";
+					tmp = tmp->succ;
+				}
+				cout<<endl;
+		}
+			
+	private:
+		Link* prev; 
+		Link* succ; 
+};
+
+//inserta n antes de este objeto
+Link* Link::insert(Link* n)
+{
+	
+	Link* p = this; 			//puntero al obj this
+	if (n==0) 
+		return p;  				//nada que insertar
+	if (p==0)
+		return n;				//nada donde insertar
+	n->succ = p; 				//p viene después de n
+	if (p->prev)
+		p->prev->succ = n;
+	n->prev = p->prev; 			//el ant de p será ant de n		
+	p->prev = n; 				//n será el ant de p
+	return n;
+	
+	    
+}
+
+int main()
+{
+
+	Link* nord_gods = new Link("Thor");
+	nord_gods = nord_gods->insert(new Link("Odin"));
+	nord_gods = nord_gods->insert( new Link("Freia"));
+	nord_gods->print();
+
+}
