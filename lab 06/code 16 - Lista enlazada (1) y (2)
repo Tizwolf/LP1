@@ -1,0 +1,96 @@
+//LISTA ENLAZADA (1) Y (2)
+//Code 16
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Link{
+	string value;
+	Link* prev;
+	Link* succ;
+	Link(const string& v, Link*p = 0, Link*s = 0): value(v), prev(p), succ(s) {		}
+};
+
+//Inserta n antes de p
+Link* insert(Link* n)
+{
+	//codigo anterior
+	/*
+	n->succ = p; 				//p viene después de n
+	p->prev->succ = n; 			//n viene después de lo	que solía ser el anterior de p
+	n->prev = p->prev; 			//el anterior de p se convierte
+							//en el anterior de n
+	p->prev = n; 				//n se convierte en 
+							//el anterior de p
+	return n;	0.					
+	*/
+	Link* p = this;
+	if (n==0) 
+		return p;  				//nada que insertar
+	if (p==0)
+		return n;				//nada donde insertar
+	n->succ = p; 				//p viene después de n
+	if (p->prev)
+		p->prev->succ = n;
+	n->prev = p->prev; 			//el ant de p será ant de n		
+	p->prev = n; 				//n será el ant de p
+	return n;
+	
+}
+
+void print(Link*nord_gods)
+{
+	Link* tmp = this;
+		while(tmp)
+		{
+			cout<<tmp->value<<"-";
+			tmp = tmp->succ;
+		}
+		cout<<endl;
+	
+}
+                                                                                            
+int main()
+{
+	Link* p = this;
+	//codigo anterior
+	/*
+	Link* nord_gods = new Link("Thor", 0,0);
+	nord_gods = new Link("Odin, nord_gods, 0");
+	nord_gods->prev->succ = nord_gods;
+	nord_gods = new Link("Freia", nord_gods, 0);
+	nord_gods->succ->prev = nord_gods;
+	*/
+	Link* nord_gods = new Link("Thor");
+	nord_gods->insert(new Link("Odin"));
+	nord_gods->insert(new Link("Freia"));
+	print(nord_gods);
+
+}
+void print(Link*nord_gods)
+{
+	Link* tmp = this;
+		while(tmp)
+		{
+			cout<<tmp->value<<"-";
+			tmp = tmp->succ;
+		}
+		cout<<endl;
+	
+}
+
+//FUNCION PARA IMPRIMIR LISTAS:
+
+//void print(Link*nord_gods)
+//{
+//	Link* tmp = this;
+//		while(tmp)
+//		{
+//			cout<<tmp->value<<"-";
+//			tmp = tmp->succ;
+//		}
+//		cout<<endl;
+//	
+//}
+
