@@ -140,6 +140,20 @@ namespace Chrono {
 		<< ','<<d.day()<< ')';			
 	}
 	
+	istream& operator>>(istream& is, Date& dd);
+	{
+	    int y, m, d;
+	    char ch1, ch2, ch3, ch4;
+	    is >> ch1 >> y >> ch2 >> m >> ch3 >> d >> ch4;
+	    if (!is) return is;
+	    if (ch1!='(' || ch2!=',' || ch3!=',' || ch4!=')') { // Error en el formato
+	        is.clear(ios_base::failbit);                    //limpia el stream
+	        return is;
+	    }
+	    dd = Date(y,Date::Month(m),d);     // Actualizando dd
+	    return is;	
+	}
+	
 	enum Day {
 		sunday, monday, tuesday, wednesday,
 		thursday, friday, saturday
