@@ -1,0 +1,26 @@
+
+//Link* Link::find(const string& s)
+
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Link 
+{
+	
+    ///....
+    Link* find(const string& s); //encuentra s en la lista
+};
+
+
+Link* Link::find(const string& s)   
+{
+    Link* p = this;
+    while (p) {
+        if (p->value == s) return p;
+        p = p->next();
+    }
+    return nullptr;
+}
